@@ -42,5 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Handle form submission
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
+    const email = document.getElementById('email').value;
+    const date = document.getElementById('date').value;
+
+    if (name && surname && email && date) {
+        const bookingInfo = {
+            name: name,
+            surname: surname,
+            email: email,
+            date: date
+        };
+
+        localStorage.setItem('booking', JSON.stringify(bookingInfo));
+        alert(`Booking confirmed for ${name} ${surname} on ${date}. Confirmation sent to ${email}.`);
+        modal.style.display = 'none';
+        document.getElementById('bookingForm').reset();
+    } else {
+        alert('Please fill all fields.');
+    }
+});
 

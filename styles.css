@@ -42,12 +42,13 @@ header {
 }
 .navlist {
     display: flex;
+    width: 43%;
 }
 .navlist a {
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 900;
-    margin:  0 40px;
+    margin:  0 10px;
     text-align: center;
     padding: 10px;
     transition: all ease .40s;
@@ -72,7 +73,7 @@ header {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -138,6 +139,27 @@ form button:hover {
     background-color: #228b22;
 }
 
+@media (max-width: 1245px){
+    .navlist {
+        display: flex;
+        width: 50%;
+    }
+}
+
+@media (max-width: 1200px){
+    .navlist {
+        display: flex;
+        width: 55%;
+    }
+}
+
+@media (max-width: 940px){
+    .navlist {
+        display: flex;
+        width: 61%;
+    }
+}
+
 @media (max-width:870px) {
     #menu-icon {
         display: block;
@@ -146,7 +168,7 @@ form button:hover {
         position: absolute;
         width: 100%;
         height: 90vh;
-        top: -700px;
+        top: -900px;
         right: 0;
         left: 0;
         display: flex;
@@ -169,5 +191,112 @@ form button:hover {
     }
     .navlist.open {
         top: 100%;
+    }
+}
+
+.hero-section{
+    position: relative;
+}
+
+.hero {
+    background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.about, .services, .testimonials {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.testimonials {
+    background: #f4f4f4;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
