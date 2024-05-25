@@ -10,6 +10,14 @@
     border: none;
     outline: none;
 }
+:root{
+    --main-background:rgba(255, 255, 255, 0.95);
+    --navbar-color: linear-gradient(to top left, #39b385, #9be15d) ;
+    --limegreen:#9be15d;
+    --dark-blue:#1424b3;
+    --tex-color: #fff;
+  
+  }
 
 body{
     width: 100%;
@@ -138,6 +146,7 @@ form button {
 form button:hover {
     background-color: #228b22;
 }
+
 
 @media (max-width: 1245px){
     .navlist {
@@ -299,4 +308,107 @@ footer {
     nav ul li {
         margin: 5px 0;
     }
+}
+
+/* ----Services---- */
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+div .hero-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #009879, #0d6efd);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.text-content h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+}
+
+.image-content img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.services, .why-choose-us {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.services h2, .why-choose-us h2 {
+    color: #009879;
+    margin: 0 0 10px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li::before {
+    content: '• ';
+    color: #009879;
+    font-size: 1.2em;
+  }
+
+.services li {
+    margin: 5px 0;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.services li:hover {
+    background-color: white;
+    color: rgb(14, 175, 36);
+    border-radius: 5px;
+    padding: 5px;
+    transform: scale(1.1); /* Slightly increases the size of the list item */
+}
+
+.why-choose-us p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.why-choose-us button {
+    background-color: #009879;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.why-choose-us button:hover {
+    background-color: #007965;
 }
