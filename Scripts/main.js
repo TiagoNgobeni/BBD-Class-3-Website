@@ -100,3 +100,39 @@ ScrollReveal().reveal('p ', { delay: 900 ,origin:'top'});
 ScrollReveal().reveal('.button', { delay: 500 ,origin:'right'});
 ScrollReveal().reveal('.Ruth-Pic', { delay: 500 ,origin:'left'});
 ScrollReveal().reveal('.Tebogo-Pic', { delay: 500 ,origin:'right'});
+
+
+// FAQs Js
+// script.js
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("faq-slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active"); // Hide all slides
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active"); // Remove active class from all dots
+    }
+
+    slides[slideIndex - 1].classList.add("active"); // Display the active slide
+    dots[slideIndex - 1].classList.add("active"); // Set the corresponding dot as active
+}
+
