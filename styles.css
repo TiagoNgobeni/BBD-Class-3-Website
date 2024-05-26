@@ -219,8 +219,8 @@ form button:hover {
     font-weight: bold;
 }
 .cta-button:hover{
-    color: #000;
-    background: linear-gradient(-100deg, #9be15d, #1424b3);
+    color: #00bfff;
+    background: linear-gradient(-10deg, #9be15d, #1424b3);
 }
 
 .about, .services, .testimonials {
@@ -238,46 +238,6 @@ h2 {
     margin: 0 auto;
 }
 
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.testimonials {
-    background: #f4f4f4;
-}
-
-.testimonial-slider {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.testimonial {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 10px 0;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
 
 @media (max-width: 1340px) {
     .navlist {
