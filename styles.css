@@ -15,9 +15,12 @@
     --navbar-color: linear-gradient(to top left, #39b385, #9be15d) ;
     --limegreen:#9be15d;
     --dark-blue:#1424b3;
-    --tex-color: #fff;
-  
-  }
+    --tex-color: #fff;  
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     width: 100%;
@@ -51,14 +54,14 @@ header {
 }
 .navlist {
     display: flex;
-    width: 43%;
+    align-items: center;
+    width: 40%;
 }
 .navlist a {
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: 900;
     margin:  0 10px;
-    text-align: center;
     padding: 10px;
     transition: all ease .40s;
 }
@@ -77,7 +80,17 @@ header {
 }
 
 .navlist .bookingBtn{
-    background-color: #00bfff;
+    font-size: 1rem;
+    width: auto;
+    height: 7vh;
+    background-color: #32cd32;
+    border-radius: 9px;
+}
+
+.navlist .bookingBtn:hover{
+    color: #32cd32;
+    background: #ffffff;
+    transition: all ease-in .50s;
 }
 
 /* Modal Styles */
@@ -275,14 +288,14 @@ footer {
 @media (max-width: 1245px){
     .navlist {
         display: flex;
-        width: 50%;
+        width: 40%;
     }
 }
 
 @media (max-width: 1200px){
     .navlist {
         display: flex;
-        width: 55%;
+        width: 59%;
     }
 }
 
@@ -366,10 +379,6 @@ footer {
 }
 
 /* ----Services---- */
-
-html {
-    scroll-behavior: smooth;
-}
 
 .container {
     width: 100%;
@@ -791,7 +800,7 @@ blockquote {
 }
 
 .card {
-    background-color: rgba(255,,255,255,0.95);
+    background-color: rgba(255,255,255,0.95);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: inline-block;
