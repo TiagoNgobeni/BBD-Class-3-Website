@@ -378,7 +378,7 @@ footer {
     }
 }
 /* FAQs css start */
-section.slideshow-container {
+.slideshow-container {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
@@ -387,8 +387,12 @@ section.slideshow-container {
 }
 
 .faq-slide {
-    display: none;
     text-align: center;
+    display: none; /* Initially hide all slides */
+}
+
+.faq-slide.active {
+    display: block; /* Display active slide */
 }
 
 .faq-content {
@@ -429,14 +433,14 @@ section.slideshow-container {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.active {
+.dot.active {
     background-color: #717171;
 }
 
-
+/* Navigation buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -450,6 +454,8 @@ section.slideshow-container {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 
 .prev {
@@ -462,7 +468,7 @@ section.slideshow-container {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 /* Responsive design */
@@ -485,7 +491,6 @@ section.slideshow-container {
         font-size: 12px;
     }
 }
-
 /* FAQS css end */
 /* ----Services---- */
 
