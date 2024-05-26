@@ -378,7 +378,7 @@ footer {
     }
 }
 
-/* ----Services---- */
+/* ----------- Start of Services ---------- */
 
 .container {
     width: 100%;
@@ -578,6 +578,7 @@ div .hero-section2 {
         transform: translateY(0);
     }
 }
+/* --------------- End of Services --------------- */
 
 /* Gallery start */
 .gallery{
@@ -1046,3 +1047,134 @@ p{
 .Ruth-About,.TebogopAbout{
     width: 100%;
 }
+/* ------------------- Footer Section ------------------- */
+body footer {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background: linear-gradient(135deg, #32CD32, #0000FF);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-areas:
+        "info map"
+        "logos logos";
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #ffffff; /* White background with a hint of blue */
+    background: linear-gradient(135deg, #ffffff 70%, #32CD32 30%);
+    padding: 20px;
+    border-radius: 10px;
+    color: #005A9C; /* Complementary blue text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer-map {
+    grid-area: map;
+    background: #ffffff; /* White background with a hint of green */
+    background: linear-gradient(135deg, #ffffff 70%, #0000FF 30%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer-logos {
+    grid-area: logos;
+    text-align: center;
+    background: #ffffff; /* White background with a hint of lime */
+    background: linear-gradient(135deg, #ffffff 70%, #32CD32 30%);
+    padding: 20px;
+    border-radius: 10px;
+    color: #005A9C; /* Complementary blue text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer-logos img {
+    width: 100px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logos img:hover {
+    transform: scale(1.1);
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #005A9C; /* Complementary blue text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #003366; /* Darker blue on hover */
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #32CD32; /* Lime green text */
+    background-color: #fff; /* White background */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    background-color: #005A9C; /* Complementary blue */
+    color: #fff; /* White text */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366; /* Darker blue */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-areas:
+            "info"
+            "map"
+            "logos";
+        grid-template-columns: 1fr;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+    }
+}
+
+/* --------------- End of Footer section ------------- */
