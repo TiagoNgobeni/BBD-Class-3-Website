@@ -1027,7 +1027,7 @@ p{
 @media (min-width: 600px) {
     .vision-mission {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content:space-around;
     }
 
     .box {
