@@ -848,31 +848,16 @@ button:hover {
     }
 }
 
+
 /*About-Us CSS Ends */
 
 /*About us 2*/
-.logo h3 {
-    font-family: 'Cedarville Cursive', cursive;
-    color: var(--alternate-color);
-}
-.navlist {
-    display: flex;
-}
-.navlist a {
-    color: var(--second-color);
-    font-size: var(--p-font);
-    font-weight: 600;
-    margin:  0 40px;
-    text-align: center;
-    padding: 10px;
-    transition: all ease .40s;
-}
-.navlist a:hover {
-    color: var(--main-color);
-    border-top: 5px solid var(--text-color);
-    border-bottom: 5px solid var(--text-color);
-    transition: all ease 0.10s;
-}
+
+
+
+
+
+
 #home-link {
     color: var(--main-color);
     border-bottom: 5px solid var(--text-color);
@@ -945,7 +930,7 @@ p{
 }
 #more{
     display: none;
-}
+    }
 .button{
     text-decoration: none;
     border: 2px solid #4831D4;
@@ -1037,6 +1022,66 @@ p{
     width: 100%;
 }
 
-.image_about {
-    max-width: 500px;
+@media (min-width: 600px) {
+    .vision-mission {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .box {
+        width: 45%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        font-size: 2rem;
+    }
+
+    .names {
+        font-size: 1.5rem;
+    }
+
+    .specilise {
+        font-size: 1.25rem;
+    }
+
+    .Ruth-Pic img,
+    .Tebogo-Pic img {
+        max-width: 200px;
+    }
+
+    .wrap1, .wrap2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Ruth-Pic, .Tebogo-Pic {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        font-size: 1.5rem;
+    }
+
+    .names {
+        font-size: 1.25rem;
+    }
+
+    .specilise {
+        font-size: 1rem;
+    }
+
+    .Ruth-Pic img,
+    .Tebogo-Pic img {
+        max-width: 150px;
+    }
+
+    .line,
+    .line_2 {
+        width: 80%;
+    }
 }
