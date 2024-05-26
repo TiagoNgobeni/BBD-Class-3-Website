@@ -103,6 +103,8 @@ ScrollReveal().reveal('.Tebogo-Pic', { delay: 500 ,origin:'right'});
 
 
 // FAQs Js
+// script.js
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -123,13 +125,14 @@ function showSlides(n) {
     if (n < 1) { slideIndex = slides.length }
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove("active"); // Hide all slides
     }
 
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].classList.remove("active"); // Remove active class from all dots
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides[slideIndex - 1].classList.add("active"); // Display the active slide
+    dots[slideIndex - 1].classList.add("active"); // Set the corresponding dot as active
 }
+
