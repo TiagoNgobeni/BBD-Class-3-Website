@@ -271,7 +271,7 @@ footer {
     padding: 20px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .service-card {
         width: 80%;
     }
@@ -285,14 +285,14 @@ footer {
     }
 }
 
-@media (max-width: 1245px){
+@media (max-width: 1246px){
     .navlist {
         display: flex;
         width: 40%;
     }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1201px){
     .navlist {
         display: flex;
         width: 59%;
@@ -317,7 +317,7 @@ footer {
     }
 }
 
-@media (max-width:870px) {
+@media (max-width:872px) {
     #menu-icon {
         display: block;
         padding-right: 20px;
@@ -360,7 +360,7 @@ footer {
     }
 }
 
-@media (max-width: 630px){
+@media (max-width: 625px){
     .hero-content {
         max-width: 280px;
     }
@@ -378,9 +378,9 @@ footer {
     }
 }
 
-/* ----------- Start of Services ---------- */
+/* ---- Services ---- */
 
-.container {
+.container1 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
