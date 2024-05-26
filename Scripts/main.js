@@ -89,3 +89,14 @@ document.addEventListener('scroll', function() {
         }
     });
 });
+
+ScrollReveal({ reset: true ,distance:'60px',duration:2500,delay:400});
+ScrollReveal().reveal('.head', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.line', { delay: 500 ,origin:'right'});
+ScrollReveal().reveal('.Ruth-pic', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.names ', { delay: 500 ,origin:'bottom'});
+ScrollReveal().reveal('.specilise ', { delay: 700 ,origin:'bottom'});
+ScrollReveal().reveal('p ', { delay: 900 ,origin:'top'});
+ScrollReveal().reveal('.button', { delay: 500 ,origin:'right'});
+ScrollReveal().reveal('.Ruth-Pic', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.Tebogo-Pic', { delay: 500 ,origin:'right'});
