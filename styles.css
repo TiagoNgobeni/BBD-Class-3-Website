@@ -727,7 +727,7 @@ div .hero-section2 {
 
 .box {
     position: relative;
-    background-color:#08a217;
+    background: linear-gradient(130deg, #9be15d, #1424b3);
     color: white;
     padding: 1rem;
     border-radius: 8px;
@@ -742,20 +742,9 @@ div .hero-section2 {
     animation: slide-in 1s forwards;
 }
 
-.box::before, .box::after {
-    content: "\f06e"; /* Default Font Awesome icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 24px;
-    color: #00aaff;
-    position: absolute;
-}
 
-.box::before {
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
+
 
 .box::after {
     bottom: -12px;
@@ -767,11 +756,7 @@ div .hero-section2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.box i {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 0.5rem;
-}
+
 
 @keyframes slide-in {
     to {
@@ -930,6 +915,11 @@ button:hover {
     
     
 }
+.line_2 {
+    border-bottom: 2px solid  #CCF381;
+    width: 60%;
+
+}
 .names{
     font-size: 3rem;
     font-family: inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1045,4 +1035,8 @@ p{
 
 .Ruth-About,.TebogopAbout{
     width: 100%;
+}
+
+.image_about {
+    max-width: 500px;
 }
