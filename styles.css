@@ -845,7 +845,7 @@ div .hero-section2 {
 
 .box {
     position: relative;
-    background-color:#08a217;
+    background: linear-gradient(130deg, #9be15d, #1424b3);
     color: white;
     padding: 1rem;
     border-radius: 8px;
@@ -860,20 +860,9 @@ div .hero-section2 {
     animation: slide-in 1s forwards;
 }
 
-.box::before, .box::after {
-    content: "\f06e"; /* Default Font Awesome icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 24px;
-    color: #00aaff;
-    position: absolute;
-}
 
-.box::before {
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
+
 
 .box::after {
     bottom: -12px;
@@ -885,11 +874,7 @@ div .hero-section2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.box i {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 0.5rem;
-}
+
 
 @keyframes slide-in {
     to {
@@ -981,31 +966,16 @@ button:hover {
     }
 }
 
+
 /*About-Us CSS Ends */
 
 /*About us 2*/
-.logo h3 {
-    font-family: 'Cedarville Cursive', cursive;
-    color: var(--alternate-color);
-}
-.navlist {
-    display: flex;
-}
-.navlist a {
-    color: var(--second-color);
-    font-size: var(--p-font);
-    font-weight: 600;
-    margin:  0 40px;
-    text-align: center;
-    padding: 10px;
-    transition: all ease .40s;
-}
-.navlist a:hover {
-    color: var(--main-color);
-    border-top: 5px solid var(--text-color);
-    border-bottom: 5px solid var(--text-color);
-    transition: all ease 0.10s;
-}
+
+
+
+
+
+
 #home-link {
     color: var(--main-color);
     border-bottom: 5px solid var(--text-color);
@@ -1048,6 +1018,11 @@ button:hover {
     
     
 }
+.line_2 {
+    border-bottom: 2px solid  #CCF381;
+    width: 60%;
+
+}
 .names{
     font-size: 3rem;
     font-family: inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1073,7 +1048,7 @@ p{
 }
 #more{
     display: none;
-}
+    }
 .button{
     text-decoration: none;
     border: 2px solid #4831D4;
@@ -1164,6 +1139,72 @@ p{
 .Ruth-About,.TebogopAbout{
     width: 100%;
 }
+<<<<<<< HEAD
+
+@media (min-width: 600px) {
+    .vision-mission {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .box {
+        width: 45%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        font-size: 2rem;
+    }
+
+    .names {
+        font-size: 1.5rem;
+    }
+
+    .specilise {
+        font-size: 1.25rem;
+    }
+
+    .Ruth-Pic img,
+    .Tebogo-Pic img {
+        max-width: 200px;
+    }
+
+    .wrap1, .wrap2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Ruth-Pic, .Tebogo-Pic {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        font-size: 1.5rem;
+    }
+
+    .names {
+        font-size: 1.25rem;
+    }
+
+    .specilise {
+        font-size: 1rem;
+    }
+
+    .Ruth-Pic img,
+    .Tebogo-Pic img {
+        max-width: 150px;
+    }
+
+    .line,
+    .line_2 {
+        width: 80%;
+    }
+}
+=======
 /* ------------------- Footer Section ------------------- */
 body footer {
     font-family: Arial, sans-serif;
@@ -1295,3 +1336,4 @@ footer {
 }
 
 /* --------------- End of Footer section ------------- */
+>>>>>>> 2317d34b962f859b761e645aa24c441f0c26b9c3
