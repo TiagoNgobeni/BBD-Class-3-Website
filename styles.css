@@ -388,15 +388,15 @@ footer {
 
 .faq-slide {
     text-align: center;
-    display: none; /* Initially hide all slides */
+    display: none; 
 }
 
 .faq-slide.active {
-    display: block; /* Display active slide */
+    display: block; 
 }
 
 .faq-content {
-    background: linear-gradient(to top left, limegreen, #00bfff); /* Main color gradient */
+    background: linear-gradient(to top left, limegreen, #00bfff); 
     color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -440,7 +440,6 @@ footer {
     background-color: #717171;
 }
 
-/* Navigation buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
