@@ -514,3 +514,139 @@ div .hero-section2 {
         transform: translateY(0);
     }
 }
+
+/* Gallery start */
+.gallery{
+  font-family: "Poppins", sans-serif ;
+  max-width: 50%;
+  margin: 120px  auto  0px  auto;
+  height: auto;
+
+}
+
+.gallery-tittle h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.25rem 0.625rem 1.5rem  0.625rem ;
+  letter-spacing: .4rem;
+  margin-bottom: 50px;
+  color: #39b385 ;
+}
+
+.column{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .5rem;
+ 
+}
+
+.column img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.column img:hover{
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 2rem; 
+      padding: 1.25em 0.625em; 
+  }
+
+  .column {
+      grid-template-columns: 1fr; 
+      margin: auto;
+  
+  }
+  .gallery-title {
+      padding: .5em; 
+      font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 376px){
+  
+  h1{
+      font-size: 1.5rem;
+  }
+  
+  .gallery-title {
+      padding: .3em; 
+      letter-spacing: .2em;
+      font-size: .875rem;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.galley figure {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  
+  animation-timing-function: ease-in-out;
+}
+
+
+.gallery-title h1 {
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes bounceInMantra {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.mantra-list {
+  animation-name: bounceInMantra;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.gallery figure:nth-child(odd) {
+  animation-name: slideInFromLeft;
+}
+
+.gallery figure:nth-child(even) {
+  animation-name: slideInFromRight;
+}
+
+/* Gallery css ends! */
