@@ -68,3 +68,24 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
     }
 });
 
+//About Us page, transition script.
+function toggleDescription(id) {
+    const desc = document.getElementById(id);
+    if (desc.style.display === 'block') {
+        desc.style.display = 'none';
+    } else {
+        desc.style.display = 'block';
+    }
+}
+
+// Animation on scroll
+document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.box, .card');
+    elements.forEach(function(element) {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight;
+        if (position < screenPosition) {
+            element.style.animation = 'slide-in 1s forwards';
+        }
+    });
+});

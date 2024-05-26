@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fToayw4pS4NNJBCebN0md5U4gtQeOVK+6+AvXZt9+JQYbrPI0HwjVQFYJ5Z0Oy7NXcXRRdFknc4v8b6Wk8nVjA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/Scripts/main.js"></script>
+    <title>Document</title>
 </head>
 <body>
     
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Images/Logos/TR-logo.png" alt="">
+            </a>
+        </div>
+        <div class="bx bx-menu-alt-right" id="menu-icon"></div>
+        <ul class="navlist">
+            <li>
+                <a href="/index.html" id="home-link">Home</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#service">Services</a>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#booking" id="bookingBtn">Booking</a>
+            </li>
+        </ul>
+    </header>
+    
+    <!-- Booking button Form Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      
+	<p style="text-align:left; margin: 30px; margin-top: 75px;">
+	At T and R biokinetics, we're dedicated biokinetics professionals committed to improving your well-being. With a passion for movement science, we create personalized programs to help you achieve optimal health. Through assessments and support, we inspire and educate, guiding you towards a healthier, happier life.
+	</p>
+    <section class="vision-mission">
+        <div class="box">
+            <i class="fas fa-eye"></i>
+            <h2>Vision</h2>
+            <p style="color:white">Empowerment: We empower individuals to take control of their health and well-being through personalized movement programs.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullseye"></i>
+            <h2>Mission</h2>
+            <p style="color:white">To revolutionize the approach to health and fitness by providing comprehensive biokinetic services that inspire, educate, and empower individuals to achieve their full potential.</p>
+        </div>
+    </section>
+    
+    <section class="quote-section">
+        <hr>
+        <blockquote>Use it or lose it</blockquote>
+        <hr>
+    </section>
+    
+    <section class="founders">
+        <h2 style="color:#08a217">Meet Our Founders</h2>
+        <div class="card">
+            <img src="/Images/About-images/ruth.jpeg" alt="Founder 1">
+            <div class="card-content">
+                <h3 style="color:#08a217">Ruth Ramabu</h3>
+                <p>Biokineticist</p>
+                <button onclick="toggleDescription('desc1')">Read More</button>
+                <p id="desc1" class="description">Ruth Ramabu completed her Diploma and B-tech degree at Tswhane University of technology, she then furthered her studies and completed a health science honours degree in Biokineticis at WITS. She is registered with the Health professional council (HPCSA) and Biokineticist Assocoation of South Africa (BASA). Ruth has a long history of sport and conditioning working for TUT High Perfromance Basketball and Netball, as well as working for the Midrand Back and Neck Centre and Physio and Wellness centre. She is also affiliated with non profit organisation Olieven Development Centre (ODA) as a health specialist.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/Images/About-images/tebogo.jpeg" alt="Founder 2">
+            <div class="card-content">
+                <h3 class="About-us_heading2">Teboho Chesane</h3>
+                <p>Biokineticist</p>
+                <button onclick="toggleDescription('desc2')">Read More</button>
+                <p id="desc2" class="description">Teboho Chesane completed Diploma in Sport Science and Human Movement Science & Recreation at North West University. Did B-tech Biokinetics at Tshwane University 2016. Registered with HPCSA and BASA. I completed my internship at BMW Plant Rosslyn 2017. I am passionate about Orthopaedic Rehabilitation, Sport conditioning and High-Performance training. I have 7 years practicing Biokinetics, worked with Midrand Back n Neck Center, Midrand Physio Wellness & TUT High Performance Baskeball, Soccer and Rugby. Exercise is a drug without side effects</p>
+            </div>
+        </div>
+
 </body>
 </html>
