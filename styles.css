@@ -327,7 +327,7 @@ div .hero-section2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #009879, #0d6efd);
+    background: linear-gradient(130deg, #9be15d, #1424b3);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -373,7 +373,7 @@ div .hero-section2 {
 }
 
 .services h2, .why-choose-us h2 {
-    color: #009879;
+    color: #9be15d;
     margin: 0 0 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -386,7 +386,7 @@ div .hero-section2 {
 
 .services li::before {
     content: '• ';
-    color: #009879;
+    color: #1424b3;
     font-size: 1.2em;
 }
 
@@ -412,7 +412,7 @@ div .hero-section2 {
 }
 
 .why-choose-us button {
-    background-color: #009879;
+    background-color: #1424b3;
     color: white;
     border: none;
     padding: 10px 20px;
