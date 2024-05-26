@@ -15,9 +15,12 @@
     --navbar-color: linear-gradient(to top left, #39b385, #9be15d) ;
     --limegreen:#9be15d;
     --dark-blue:#1424b3;
-    --tex-color: #fff;
-  
-  }
+    --tex-color: #fff;  
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     width: 100%;
@@ -40,7 +43,8 @@ header {
     /* padding: 28px; */
     border-bottom: 1px solid transparent;
     transition: all ease .50s;
-    background: linear-gradient(to top left, #9be15d, #39b385);
+    background: linear-gradient(130deg, #9be15d, #1424b3);
+    /* background: linear-gradient(to top left, #9be15d, #39b385); */
 }
 
 .logo img {
@@ -50,31 +54,43 @@ header {
 }
 .navlist {
     display: flex;
-    width: 43%;
+    align-items: center;
+    width: 40%;
 }
 .navlist a {
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: 900;
     margin:  0 10px;
-    text-align: center;
     padding: 10px;
     transition: all ease .40s;
 }
 .navlist a:hover,
 .navlist a:hover {
-    color: #1424b3;
+    color: #32cd32;
     transition: all ease 0.10s;
 }
-#home-link {
-    color: #1424b3;
-}
+
 #menu-icon {
     font-size: 42px;
     color: var(--text-color);
     z-index: 10001;
     cursor: pointer;
     display: none;
+}
+
+.navlist .bookingBtn{
+    font-size: 1rem;
+    width: auto;
+    height: 7vh;
+    background-color: #32cd32;
+    border-radius: 9px;
+}
+
+.navlist .bookingBtn:hover{
+    color: #32cd32;
+    background: #ffffff;
+    transition: all ease-in .50s;
 }
 
 /* Modal Styles */
@@ -147,69 +163,13 @@ form button:hover {
     background-color: #228b22;
 }
 
-
-@media (max-width: 1245px){
-    .navlist {
-        display: flex;
-        width: 50%;
-    }
-}
-
-@media (max-width: 1200px){
-    .navlist {
-        display: flex;
-        width: 55%;
-    }
-}
-
-@media (max-width: 940px){
-    .navlist {
-        display: flex;
-        width: 61%;
-    }
-}
-
-@media (max-width:870px) {
-    #menu-icon {
-        display: block;
-    }
-    .navlist {
-        position: absolute;
-        width: 100%;
-        height: 90vh;
-        top: -900px;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        /* background: #021d6f; */
-        background: linear-gradient(to top left, #9be15d, #39b385);
-        /* border-radius: 55px; */
-        padding: 20px 0;
-        text-align: center;
-        transition: all .50s ease;
-    }
-    .navlist a {
-        margin: auto;
-        display: block;
-        font-size: 22px;
-        padding: 12px 0;
-        margin: 30px 0;
-        
-        /* background: #000; */
-    }
-    .navlist.open {
-        top: 100%;
-    }
-}
-
 .hero-section{
     position: relative;
 }
 
 .hero {
-    background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover;
-    height: 80vh;
+    /* background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,22 +177,37 @@ form button:hover {
     text-align: center;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
 .hero-content {
+    /* padding: 0 5%; */
     max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3rem;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    background: #FF5722;
+    background: linear-gradient(1deg, #9be15d, #1424b3);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -310,11 +285,100 @@ footer {
     }
 }
 
-/* ----Services---- */
-
-html {
-    scroll-behavior: smooth;
+@media (max-width: 1245px){
+    .navlist {
+        display: flex;
+        width: 40%;
+    }
 }
+
+@media (max-width: 1200px){
+    .navlist {
+        display: flex;
+        width: 59%;
+    }
+}
+
+@media (max-width: 940px){
+    .navlist {
+        display: flex;
+        width: 61%;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:870px) {
+    #menu-icon {
+        display: block;
+        padding-right: 20px;
+        font-size: 50px;
+    }
+    .navlist {
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        top: -2000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        /* background: #021d6f; */
+        background: linear-gradient(-130deg, #9be15d, #1424b3);
+        /* background: linear-gradient(to top left, #9be15d, #39b385); */
+        /* border-radius: 55px; */
+        padding: 20px 0;
+        text-align: center;
+        transition: all .50s ease;
+    }
+    .navlist a {
+        margin: auto;
+        display: block;
+        /* font-size: 22px; */
+        padding: 12px 0;
+        margin: 30px 0;
+        
+        /* background: #000; */
+    }
+
+    .navlist .bookingBtn{
+        width: 20%;
+        margin: auto;
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+}
+
+@media (max-width: 630px){
+    .hero-content {
+        max-width: 280px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        /* padding: 0 5%; */
+    }
+}
+
+/* ----Services---- */
 
 .container {
     width: 100%;
@@ -327,7 +391,7 @@ div .hero-section2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #009879, #0d6efd);
+    background: linear-gradient(130deg, #9be15d, #1424b3);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -373,7 +437,7 @@ div .hero-section2 {
 }
 
 .services h2, .why-choose-us h2 {
-    color: #009879;
+    color: #9be15d;
     margin: 0 0 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -386,7 +450,7 @@ div .hero-section2 {
 
 .services li::before {
     content: '• ';
-    color: #009879;
+    color: #1424b3;
     font-size: 1.2em;
 }
 
@@ -412,7 +476,7 @@ div .hero-section2 {
 }
 
 .why-choose-us button {
-    background-color: #009879;
+    background-color: #1424b3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -434,7 +498,7 @@ div .hero-section2 {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
-    .hero-section {
+    .hero-section2 {
         flex-direction: column;
         text-align: center;
     }
