@@ -377,7 +377,116 @@ footer {
         /* padding: 0 5%; */
     }
 }
+/* FAQs css start */
+section.slideshow-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
 
+.faq-slide {
+    display: none;
+    text-align: center;
+}
+
+.faq-content {
+    background: linear-gradient(to top left, limegreen, #00bfff); /* Main color gradient */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.faq-slide h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.faq-slide p, .faq-slide ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-slide ul {
+    padding-left: 20px;
+}
+
+.faq-slide li {
+    list-style-type: disc;
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .faq-slide h2 {
+        font-size: 18px;
+    }
+
+    .faq-slide p, .faq-slide ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-slide h2 {
+        font-size: 16px;
+    }
+
+    .faq-slide p, .faq-slide ul {
+        font-size: 12px;
+    }
+}
+
+/* FAQS css end */
 /* ----Services---- */
 
 .container {
