@@ -68,3 +68,35 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
     }
 });
 
+//About Us page, transition script.
+function toggleDescription(id) {
+    const desc = document.getElementById(id);
+    if (desc.style.display === 'block') {
+        desc.style.display = 'none';
+    } else {
+        desc.style.display = 'block';
+    }
+}
+
+// Animation on scroll
+document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.box, .card');
+    elements.forEach(function(element) {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight;
+        if (position < screenPosition) {
+            element.style.animation = 'slide-in 1s forwards';
+        }
+    });
+});
+
+ScrollReveal({ reset: true ,distance:'60px',duration:2500,delay:400});
+ScrollReveal().reveal('.head', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.line', { delay: 500 ,origin:'right'});
+ScrollReveal().reveal('.Ruth-pic', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.names ', { delay: 500 ,origin:'bottom'});
+ScrollReveal().reveal('.specilise ', { delay: 700 ,origin:'bottom'});
+ScrollReveal().reveal('p ', { delay: 900 ,origin:'top'});
+ScrollReveal().reveal('.button', { delay: 500 ,origin:'right'});
+ScrollReveal().reveal('.Ruth-Pic', { delay: 500 ,origin:'left'});
+ScrollReveal().reveal('.Tebogo-Pic', { delay: 500 ,origin:'right'});

@@ -15,9 +15,12 @@
     --navbar-color: linear-gradient(to top left, #39b385, #9be15d) ;
     --limegreen:#9be15d;
     --dark-blue:#1424b3;
-    --tex-color: #fff;
-  
-  }
+    --tex-color: #fff;  
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     width: 100%;
@@ -40,7 +43,8 @@ header {
     /* padding: 28px; */
     border-bottom: 1px solid transparent;
     transition: all ease .50s;
-    background: linear-gradient(to top left, #9be15d, #39b385);
+    background: linear-gradient(130deg, #9be15d, #1424b3);
+    /* background: linear-gradient(to top left, #9be15d, #39b385); */
 }
 
 .logo img {
@@ -50,31 +54,43 @@ header {
 }
 .navlist {
     display: flex;
-    width: 43%;
+    align-items: center;
+    width: 40%;
 }
 .navlist a {
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: 900;
     margin:  0 10px;
-    text-align: center;
     padding: 10px;
     transition: all ease .40s;
 }
 .navlist a:hover,
 .navlist a:hover {
-    color: #1424b3;
+    color: #32cd32;
     transition: all ease 0.10s;
 }
-#home-link {
-    color: #1424b3;
-}
+
 #menu-icon {
     font-size: 42px;
     color: var(--text-color);
     z-index: 10001;
     cursor: pointer;
     display: none;
+}
+
+.navlist .bookingBtn{
+    font-size: 1rem;
+    width: auto;
+    height: 7vh;
+    background-color: #32cd32;
+    border-radius: 9px;
+}
+
+.navlist .bookingBtn:hover{
+    color: #32cd32;
+    background: #ffffff;
+    transition: all ease-in .50s;
 }
 
 /* Modal Styles */
@@ -147,69 +163,13 @@ form button:hover {
     background-color: #228b22;
 }
 
-
-@media (max-width: 1245px){
-    .navlist {
-        display: flex;
-        width: 50%;
-    }
-}
-
-@media (max-width: 1200px){
-    .navlist {
-        display: flex;
-        width: 55%;
-    }
-}
-
-@media (max-width: 940px){
-    .navlist {
-        display: flex;
-        width: 61%;
-    }
-}
-
-@media (max-width:870px) {
-    #menu-icon {
-        display: block;
-    }
-    .navlist {
-        position: absolute;
-        width: 100%;
-        height: 90vh;
-        top: -900px;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        /* background: #021d6f; */
-        background: linear-gradient(to top left, #9be15d, #39b385);
-        /* border-radius: 55px; */
-        padding: 20px 0;
-        text-align: center;
-        transition: all .50s ease;
-    }
-    .navlist a {
-        margin: auto;
-        display: block;
-        font-size: 22px;
-        padding: 12px 0;
-        margin: 30px 0;
-        
-        /* background: #000; */
-    }
-    .navlist.open {
-        top: 100%;
-    }
-}
-
 .hero-section{
     position: relative;
 }
 
 .hero {
-    background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover;
-    height: 80vh;
+    /* background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,22 +177,37 @@ form button:hover {
     text-align: center;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('Images/Hero-Images/hero-background.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
 .hero-content {
+    /* padding: 0 5%; */
     max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3rem;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    background: #FF5722;
+    background: linear-gradient(1deg, #9be15d, #1424b3);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -310,11 +285,100 @@ footer {
     }
 }
 
-/* ----Services---- */
-
-html {
-    scroll-behavior: smooth;
+@media (max-width: 1245px){
+    .navlist {
+        display: flex;
+        width: 40%;
+    }
 }
+
+@media (max-width: 1200px){
+    .navlist {
+        display: flex;
+        width: 59%;
+    }
+}
+
+@media (max-width: 940px){
+    .navlist {
+        display: flex;
+        width: 61%;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:870px) {
+    #menu-icon {
+        display: block;
+        padding-right: 20px;
+        font-size: 50px;
+    }
+    .navlist {
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        top: -2000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        /* background: #021d6f; */
+        background: linear-gradient(-130deg, #9be15d, #1424b3);
+        /* background: linear-gradient(to top left, #9be15d, #39b385); */
+        /* border-radius: 55px; */
+        padding: 20px 0;
+        text-align: center;
+        transition: all .50s ease;
+    }
+    .navlist a {
+        margin: auto;
+        display: block;
+        /* font-size: 22px; */
+        padding: 12px 0;
+        margin: 30px 0;
+        
+        /* background: #000; */
+    }
+
+    .navlist .bookingBtn{
+        width: 20%;
+        margin: auto;
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+}
+
+@media (max-width: 630px){
+    .hero-content {
+        max-width: 280px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        /* padding: 0 5%; */
+    }
+}
+
+/* ----Services---- */
 
 .container {
     width: 100%;
@@ -434,7 +498,7 @@ div .hero-section2 {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
-    .hero-section {
+    .hero-section2 {
         flex-direction: column;
         text-align: center;
     }
@@ -650,3 +714,335 @@ div .hero-section2 {
 }
 
 /* Gallery css ends! */
+
+/*About Us starts*/
+
+.vision-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+.box {
+    position: relative;
+    background-color:#08a217;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 1s forwards;
+}
+
+.box::before, .box::after {
+    content: "\f06e"; /* Default Font Awesome icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #00aaff;
+    position: absolute;
+}
+
+.box::before {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box::after {
+    bottom: -12px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box i {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.quote-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.founders {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 1rem;
+    width: 90%;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 1s forwards;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+button {
+    background-color:#08a217;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0088cc;
+}
+
+.description {
+    display: none;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 600px) {
+    .vision-mission {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .box {
+        width: 45%;
+        margin-bottom: 0;
+    }
+}
+
+/*About-Us CSS Ends */
+
+/*About us 2*/
+.logo h3 {
+    font-family: 'Cedarville Cursive', cursive;
+    color: var(--alternate-color);
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin:  0 40px;
+    text-align: center;
+    padding: 10px;
+    transition: all ease .40s;
+}
+.navlist a:hover {
+    color: var(--main-color);
+    border-top: 5px solid var(--text-color);
+    border-bottom: 5px solid var(--text-color);
+    transition: all ease 0.10s;
+}
+#home-link {
+    color: var(--main-color);
+    border-bottom: 5px solid var(--text-color);
+    padding-bottom: 2px solid var(--main-color);
+    /* border-radius: 10px; */
+}
+#menu-icon {
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+  
+.tittle1{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+.Whole-information{
+    width: 90%;
+    margin: 0 auto;
+   
+    
+   
+}
+.head{
+    font-weight: 600;
+    font-size: 52px;
+    font-family:Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif ;
+    line-height: 35px;
+    color: #4831D4;
+}
+.line{
+    border-bottom: 2px solid  #CCF381;
+    width: 50%;
+    
+    
+}
+.names{
+    font-size: 3rem;
+    font-family: inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    line-height: 48px;
+    padding-bottom: 1rem;
+    color: #4831D4;
+}
+.specilise{
+    font-family: __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 450;
+    line-height: 28px;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    color:#CCF381;
+}
+p{
+    
+    font-family:__inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    line-height: 26px;
+    color: #3D155F;
+}
+#more{
+    display: none;
+}
+.button{
+    text-decoration: none;
+    border: 2px solid #4831D4;
+   
+    margin-top: 2.5rem;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+   
+    color: #4831D4;
+    cursor: pointer;
+    
+    box-shadow: 10px 10px;
+    transition: 2s ease-in-out;
+
+}
+
+.button:hover{
+    background-color: #4831D4;
+    color: #CCF381;
+    box-shadow: none;
+    
+    z-index: -7;
+    
+
+
+
+}
+.button a{
+    font-size: 20px;
+    padding:20px 30px;
+}
+
+.wrap1,.wrap2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 30px;
+    
+    
+  
+}
+.Ruth-Pic,.Tebogo-Pic{
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+.Tebogo-Pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Ruth-Pic::before{
+    
+    content: " ";
+    border: 4px solid #CCF381;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 70px;
+    
+    z-index: -7;
+
+    width: 25rem; 
+    height: 25rem; 
+    min-width: 300px;
+  
+  
+   
+}
+.Tebogo-Pic::before{
+    
+    content: " ";
+    border: 4px solid #CCF381;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 70px;
+    
+    z-index: -7;
+
+    width: 25rem; 
+    height: 25rem; 
+  min-width: 300px;
+  
+   
+}
+
+.Ruth-About,.TebogopAbout{
+    width: 100%;
+}
