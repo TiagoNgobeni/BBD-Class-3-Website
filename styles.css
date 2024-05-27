@@ -246,31 +246,6 @@ h2 {
     margin: 10px 0;
 }
 
-.testimonials {
-    background: #f4f4f4;
-}
-
-.testimonial-slider {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.testimonial {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 10px 0;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
 @media (max-width: 768px) {
     .service-card {
         width: 80%;
@@ -638,7 +613,7 @@ div .hero-section2 {
   h1{
       font-size: 1.5rem;
   }
-  
+
   .gallery-title {
       padding: .3em; 
       letter-spacing: .2em;
@@ -667,7 +642,6 @@ div .hero-section2 {
   }
 }
 
-
 .galley figure {
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -675,14 +649,12 @@ div .hero-section2 {
   animation-timing-function: ease-in-out;
 }
 
-
 .gallery-title h1 {
   animation-name: bounceIn;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
-
 
 @keyframes bounceInMantra {
   0% {
@@ -695,15 +667,12 @@ div .hero-section2 {
   }
 }
 
-
 .mantra-list {
   animation-name: bounceInMantra;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
-
-
 
 .gallery figure:nth-child(odd) {
   animation-name: slideInFromLeft;
@@ -721,8 +690,7 @@ div .hero-section2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    
+    padding: 2rem;   
 }
 
 .box {
@@ -742,10 +710,6 @@ div .hero-section2 {
     animation: slide-in 1s forwards;
 }
 
-
-
-
-
 .box::after {
     bottom: -12px;
     right: 50%;
@@ -757,15 +721,12 @@ div .hero-section2 {
 }
 
 
-
 @keyframes slide-in {
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
-
-
 
 .quote-section {
     text-align: center;
@@ -848,15 +809,9 @@ button:hover {
     }
 }
 
-
 /*About-Us CSS Ends */
 
 /*About us 2*/
-
-
-
-
-
 
 #home-link {
     color: var(--main-color);
@@ -872,7 +827,7 @@ button:hover {
     display: none;
 }
   
-.tittle1{
+.tittle1 {
     margin: 0 auto;
     width: 90%;
     display: flex;
@@ -882,11 +837,9 @@ button:hover {
 }
 .Whole-information{
     width: 90%;
-    margin: 0 auto;
-   
-    
-   
+    margin: 0 auto;  
 }
+
 .head{
     font-weight: 600;
     font-size: 52px;
@@ -905,7 +858,7 @@ button:hover {
     width: 60%;
 
 }
-.names{
+.names {
     font-size: 3rem;
     font-family: inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
@@ -913,7 +866,7 @@ button:hover {
     padding-bottom: 1rem;
     color: #4831D4;
 }
-.specilise{
+.specilise {
     font-family: __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 450;
     line-height: 28px;
@@ -921,7 +874,7 @@ button:hover {
     padding-bottom: 1rem;
     color:#CCF381;
 }
-p{
+p {
     
     font-family:__inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 16px;
@@ -946,20 +899,15 @@ p{
     
     box-shadow: 10px 10px;
     transition: 2s ease-in-out;
-
 }
 
 .button:hover{
     background-color: #4831D4;
     color: #CCF381;
     box-shadow: none;
-    
     z-index: -7;
-    
-
-
-
 }
+
 .button a{
     font-size: 20px;
     padding:20px 30px;
@@ -969,11 +917,9 @@ p{
     display: flex;
     align-items: center;
     margin-bottom: 100px;
-    padding: 30px;
-    
-    
-  
+    padding: 30px;   
 }
+
 .Ruth-Pic,.Tebogo-Pic{
     width: 100%;
     min-width: 300px;
@@ -997,7 +943,6 @@ p{
     width: 25rem; 
     height: 25rem; 
     min-width: 300px;
-  
   
    
 }
