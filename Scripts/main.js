@@ -1,3 +1,4 @@
+// NAV JS
 const header = document.querySelector("header");
 window.addEventListener ("scroll", function() {
     header.classList.toggle ("sticky", window.scrollY > 200)
@@ -16,6 +17,7 @@ window.onscroll = () => {
     navlist.classList.remove('open');
 };
 
+// Feedback Modal Form
 document.addEventListener('DOMContentLoaded', () => {
     const bookingBtn = document.getElementById('bookingBtn');
     const bookingModal = document.getElementById('bookingModal');
