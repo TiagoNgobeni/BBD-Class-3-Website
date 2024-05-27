@@ -391,7 +391,13 @@ h2 {
     }
 }
 
-/* ----Services---- */
+/* ------ Services ------ */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+} */
 
 
 .slideshow-container {
@@ -510,47 +516,43 @@ h2 {
 
 /* ----Services---- */
 
-.container {
+.service-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-div .hero-section2 {
+.service-hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(130deg, #9be15d, #1424b3);
+    background: linear-gradient(135deg, #32CD32, #0000FF);
     color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.8s ease-in-out;
 }
 
-.text-content {
+.service-text-content {
     flex: 1;
     padding: 0 20px;
 }
 
-.text-content h1 {
+.service-text-content h1 {
     font-size: 2.5em;
     margin: 0 0 10px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
 }
 
-.text-content p {
+.service-text-content p {
     font-size: 1.2em;
 }
 
-.image-content img {
+.service-image-content img {
     width: 300px;
     border-radius: 10px;
 }
 
-.content-section {
+.service-content-section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -558,19 +560,16 @@ div .hero-section2 {
 }
 
 .services, .why-choose-us {
-    background-color: white;
+    background: linear-gradient(135deg, #ffffff 70%, #32CD32 30%);
     padding: 20px;
     border-radius: 10px;
     flex: 1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .services h2, .why-choose-us h2 {
-    color: #9be15d;
+    color: #005A9C; /* Complementary blue text */
     margin: 0 0 10px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
 }
 
 .services ul {
@@ -580,7 +579,7 @@ div .hero-section2 {
 
 .services li::before {
     content: '• ';
-    color: #1424b3;
+    color: #32CD32; /* Lime green bullet points */
     font-size: 1.2em;
 }
 
@@ -592,12 +591,11 @@ div .hero-section2 {
 }
 
 .services li:hover {
-    background-color: white;
-    color: rgb(14, 175, 36);
+    background-color: #32CD32; /* Lime green background on hover */
+    color: white; /* White text on hover */
     border-radius: 5px;
     padding: 5px;
     transform: scale(1.1); /* Slightly increases the size of the list item */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .why-choose-us p {
@@ -606,7 +604,7 @@ div .hero-section2 {
 }
 
 .why-choose-us button {
-    background-color: #1424b3;
+    background-color: #0000FF; /* Blue button */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -617,48 +615,42 @@ div .hero-section2 {
 }
 
 .why-choose-us button:hover {
-    background-color: #007965;
+    background-color: #005A9C; /* Complementary blue on hover */
 }
 
-.why-choose-us button:focus {
-    outline: 3px solid #005f46;
-}
-
-
-
-/* Media Queries for Responsive Design */
+/* ----- Media Queries for Responsive Design ----- */
 @media (max-width: 1024px) {
-    .hero-section2 {
+    .service-hero-section {
         flex-direction: column;
         text-align: center;
     }
 
-    .image-content img {
+    .service-image-content img {
         width: 100%;
         max-width: 400px;
         margin: 20px 0;
     }
 
-    .text-content h1 {
+    .service-text-content h1 {
         font-size: 2em;
     }
 
-    .text-content p {
+    .service-text-content p {
         font-size: 1em;
     }
 
-    .content-section {
+    .service-content-section {
         flex-direction: column;
         gap: 10px;
     }
 }
 
 @media (max-width: 768px) {
-    .text-content h1 {
+    .service-text-content h1 {
         font-size: 1.8em;
     }
 
-    .text-content p {
+    .service-text-content p {
         font-size: 0.9em;
     }
 
@@ -676,11 +668,11 @@ div .hero-section2 {
 }
 
 @media (max-width: 480px) {
-    .text-content h1 {
+    .service-text-content h1 {
         font-size: 1.5em;
     }
 
-    .text-content p {
+    .service-text-content p {
         font-size: 0.8em;
     }
 
@@ -708,6 +700,7 @@ div .hero-section2 {
         transform: translateY(0);
     }
 }
+/* ------- End of Services ------- */
 
 /* Gallery start */
 .gallery{
@@ -1182,7 +1175,7 @@ p {
     }
 }
 
-}/* Slideshow container */
+/* Slideshow container */
 .slideshow-container {
     position: relative;
     max-width: 800px;
@@ -1262,4 +1255,5 @@ p {
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
 }
