@@ -105,7 +105,6 @@ ScrollReveal().reveal('.Tebogo-Pic', { delay: 500 ,origin:'right'});
 
 
 // FAQs Js
-// script.js
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -127,14 +126,14 @@ function showSlides(n) {
     if (n < 1) { slideIndex = slides.length }
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active"); // Hide all slides
+        slides[i].classList.remove("active"); 
     }
 
     for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active"); // Remove active class from all dots
+        dots[i].classList.remove("active"); 
     }
 
-    slides[slideIndex - 1].classList.add("active"); // Display the active slide
-    dots[slideIndex - 1].classList.add("active"); // Set the corresponding dot as active
+    slides[slideIndex - 1].classList.add("active"); 
+    dots[slideIndex - 1].classList.add("active"); 
 }
 
